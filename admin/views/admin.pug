@@ -1,0 +1,21 @@
+html
+  include includes/head.pug
+  body
+    .container-fluid
+      .list-group
+        include includes/admin_nav.pug
+        each training in trainings
+          .list-group-item
+            .row
+              h4.col-12.col-md-8= training.name
+              .col-12.col-md-4.btn-group(role="group",aria-label="Content control buttons")
+                a.btn.btn-secondary(type="button", href=`/admin/trainings/${training.ID}/`) Edit
+                button.btn.btn-danger(type="button", onclick=`deleteFunc(${training.ID})`) Remove
+        a.list-group-item.list-group-item-action.text-center(href=`/admin/trainings/new/`) Add a new text
+    script.
+      function deleteFunc(id) {
+          fetch(`/admin/trainings/${id}/`,{ method: 'DELETE'}).then(()=>{
+              alert('Resource successfully deleted')
+              location.reload()
+              }).catch(err => console.log(err))
+      }

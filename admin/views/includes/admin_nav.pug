@@ -1,0 +1,10 @@
+nav.navbar.navbar-expand-lg.navbar-dark(style= "background-color: teal")
+  a.navbar-brand(href="/")
+    strong='Return to user view | ' 
+.nav.list-group-item(role="group",aria-label="Nav links")
+    if trainings
+        a.col-6.btn.btn-primary(type="button", href='.') Trainings
+        a.col-6.btn.btn-secondary(type="button", href='/admin/requests') Requests
+    else
+        a.col-6.btn.btn-secondary(type="button", href='/admin/trainings') Trainings
+        a.col-6.btn.btn-primary(type="button", href='.') Responses

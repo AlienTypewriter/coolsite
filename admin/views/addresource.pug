@@ -1,0 +1,26 @@
+html 
+  include includes/head.pug
+  body
+    .container
+      form.form-horizontal(action=".",method="post", enctype="application/x-www-form-urlencoded") 
+        fieldset 
+          legend="Create a text" 
+          .form-group 
+            label.col.control-label(for="name") Name
+            .col
+              input#name.form-control.input-md(name='name' type='name' placeholder='Lorem ipsum' value=training ? training.name : "" required)
+            label.col.control-label(for="lang") Language code
+            .col
+              select#lang.form-control.input-md(name='lang')
+                option en
+                option(selected= training ? training.lang=='uk' : false) uk
+            label.col.control-label(for='shortdesc') Brief description
+            .col
+              textarea#shortdesc.form-control.input-md(name='shortdesc',rows='2',placeholder='Dolor sit amet', required)= training ? training.shortdesc : ""
+            label.col.control-label(for='ldesc') Long description
+            .col
+              textarea#ldesc.form-control.input-md(name='ldesc',rows='5',placeholder='Dolor sit amet', required)= training ? training.ldesc : ""
+            .form-group
+              label.col.control-label(for='submit')
+              .col
+                button#submit.btn.btn-primary(name='submit') Save

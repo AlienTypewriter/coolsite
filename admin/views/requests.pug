@@ -1,0 +1,30 @@
+html
+  include includes/head.pug
+  body
+    .container-fluid
+        include includes/admin_nav.pug
+        table.table.table-bordered.text-center
+            each request in requests
+                tr
+                    th(scope="col") Family name
+                    th(scope="col") Name
+                    th(scope="col") Phone
+                    th(scope="col") Email
+                tr
+                    td(scope="row")= request.surname
+                    td= request.name
+                    td= request.phone
+                    td= request.email
+                tr
+                    td(colspan="3")
+                        strong Content: 
+                        span= request.content
+                    td
+                        button.btn.btn-danger.col-12(type="button",onclick=`deleteFunc(${request.ID})`) Remove
+            script.
+                function deleteFunc(id) {
+                    fetch(`/admin/requests/${id}/`,{ method: 'DELETE'}).then(()=>{
+                        alert('Request deleted')
+                        location.reload()
+                        })
+                }
