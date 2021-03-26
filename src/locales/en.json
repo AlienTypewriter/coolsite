@@ -1,0 +1,22 @@
+{
+	"app-form": "Application form",
+	"name": "Your name",
+	"name-ph": "Enter your name",
+	"surname": "Your family name",
+	"surname-ph": "Enter your family name",
+	"name-fail": "Neither name nor family name can be empty",
+	"email": "Your email address",
+	"email-ph": "Enter your email address",
+	"email-fail": "Incorrect email address",
+	"phone": "Your phone number (in +38 (ххх) хххххх format)",
+	"phone-ph": "Enter your phone number",
+	"phone-fail": "Incorrect phone number format",
+	"msg": "Your message",
+	"msg-fail": "Message may not be empty",
+	"submit": "Submit",
+	"welcome":"Welcome to our website. You will be trained here. Whether you want to or not.",
+    "acc":"Our training courses are certified by the best specialists money can buy, and are widely considered the best option when it comes to learning stuff",
+    "more":"Learn more...",
+    "about":"We are a small but intensely dedicated team, whose focus lies solely on teaching and keeping our identities an utmost secret.",
+	"team":"This is where you are supposed to learn about our team. Unfortunately, you'd have more luck trying to find out your FBI agent's name. Still, if you complete all of the trainings, we may just drop you a hint. Or a small nuclear payload that somehow disappeared out of the storage of some newly established Middle East government. Equal odds.\nDisclaimer: The odds aren't actually equal"
+}

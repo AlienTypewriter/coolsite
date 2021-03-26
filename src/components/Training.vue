@@ -2,7 +2,7 @@
     div.training
         h3 {{training.name}}
         p {{training.shortdesc}}
-        p.translate.trainexpand(data-i18n="more", @click="expand", v-if="!this.clicked") more
+        p.trainexpand(@click="expand", v-if="!this.clicked") {{ $t('more') }}
 </template>
 
 <script>

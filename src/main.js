@@ -1,34 +1,20 @@
 import Vue from 'vue'
 import $ from 'jquery'
-import i18next from 'i18next'
-import jqueryI18next from 'jquery-i18next'
+import 'bootstrap'
 import App from './App.vue'
 import router from './router'
 import config from '../config.json'
+import i18n from './i18n'
 
 Vue.config.productionTip = false
 
 new Vue({
   router,
+  i18n,
   render: h => h(App)
 }).$mount('#app')
+
 $(async function() {
-  let lang = document.cookie.match(/locName=(.{2})/)
-  i18next.init({
-    lng: lang? lang[1] : "en",
-    debug: true,
-    resources: {
-      en: {
-        translation: await fetch('/api/locale/en').then(data=>data.json())
-      },
-      uk: {
-        translation: await fetch('/api/locale/uk').then(data=>data.json())
-      }
-    }
-  }, function() {
-    jqueryI18next.init(i18next, $);
-    $(".translate").localize();
-  });
   $("#submit").on("click", function (event) {
     event.stopPropagation();
     let valid = document.getElementById("form").checkValidity()

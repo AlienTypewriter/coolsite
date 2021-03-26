@@ -22,12 +22,6 @@
             "ukname":"Про нас",
             "url":"/about",
             "vue_handler":"about"
-        },
-        {
-            "name":"About2",
-            "ukname":"Про нас2",
-            "url":"/about2",
-            "vue_handler":"about"
         }
     ]
 }
