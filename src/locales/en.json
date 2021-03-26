@@ -1,4 +1,7 @@
 {
+	"home": "Home",
+	"about": "About",
+	"train": "Train",
 	"app-form": "Application form",
 	"name": "Your name",
 	"name-ph": "Enter your name",
@@ -17,6 +20,6 @@
 	"welcome":"Welcome to our website. You will be trained here. Whether you want to or not.",
     "acc":"Our training courses are certified by the best specialists money can buy, and are widely considered the best option when it comes to learning stuff",
     "more":"Learn more...",
-    "about":"We are a small but intensely dedicated team, whose focus lies solely on teaching and keeping our identities an utmost secret.",
+    "aboutUs":"We are a small but intensely dedicated team, whose focus lies solely on teaching and keeping our identities an utmost secret.",
 	"team":"This is where you are supposed to learn about our team. Unfortunately, you'd have more luck trying to find out your FBI agent's name. Still, if you complete all of the trainings, we may just drop you a hint. Or a small nuclear payload that somehow disappeared out of the storage of some newly established Middle East government. Equal odds.\nDisclaimer: The odds aren't actually equal"
 }

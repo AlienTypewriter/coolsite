@@ -1,6 +1,6 @@
 <template lang="pug">
   div
     .jumbotron
-      p.lead {{ $t('about') }}
+      p.lead {{ $t('aboutUs') }}
     p {{ $t('team') }}
 </template>

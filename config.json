@@ -6,22 +6,19 @@
     "img":"train.jpg",
     "menu" : [
         {
-            "name":"Home",
-            "ukname":"Головна",
+            "name":"home",
             "url":"/",
-            "vue_handler":"home"
+            "vue_handler":"Home"
         },
         {
-            "name":"Train",
-            "ukname":"Тренування",
+            "name":"train",
             "url":"/train",
-            "vue_handler":"train"
+            "vue_handler":"Train"
         },
         {
-            "name":"About",
-            "ukname":"Про нас",
+            "name":"about",
             "url":"/about",
-            "vue_handler":"about"
+            "vue_handler":"About"
         }
     ]
 }

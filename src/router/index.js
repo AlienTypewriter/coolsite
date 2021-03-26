@@ -1,26 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import config from "../../config.json"
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
-  },
-  {
-    path: '/train',
-    name: 'train',
-    component: () => import('../views/Train.vue')
-  }
-]
+const routes = config.menu.map(x=>{
+  let y = Object()
+  y.path = x.url
+  y.name = x.name
+  y.component = ()=> import('@/views/'+x.vue_handler+'.vue')
+  return y
+})
 
 const router = new VueRouter({
   routes

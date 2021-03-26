@@ -9,12 +9,12 @@
               span.icon-bar         
             .collapse.navbar-collapse#navbar-main
               ul.navbar-nav.mr-auto
+                li.nav-item(v-for="item in config.menu")
+                  router-link(:to="item.url").nav-link {{$t(item.name)}}
                 li.nav-item
-                  router-link(to="/").nav-link Home
+                  strong(@click="change('uk')" align="right").nav-link UKR
                 li.nav-item
-                  router-link(to="/about").nav-link About
-                li.nav-item
-                  router-link(to="/train").nav-link Train
+                  strong(@click="change('en')" align="right").nav-link ENG
           router-view
       .col-4
         div
@@ -39,11 +39,12 @@
               div
                   label(for="content") {{$t("msg")}}
                   textarea#content.form-control.input-md(name='content' required)
-                  .invalid-feedback {{$t("msg-fail")
+                  .invalid-feedback {{$t("msg-fail")}}
               button#submit.btn-block.btn-success(type='submit') {{$t("submit")}}
 </template>
 
 <script>
+import i18n from "./i18n"
 import config from "../config.json"
 
 export default {
@@ -51,6 +52,12 @@ export default {
   data: function() {
     return {
       config: config
+    }
+  },
+  methods: {
+    change: function(locale) {
+      console.log(locale)
+      i18n.locale = locale
     }
   }
 }
