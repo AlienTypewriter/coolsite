@@ -20,5 +20,6 @@
             "url":"/about",
             "vue_handler":"About"
         }
-    ]
+    ],
+    "api_url": "http://localhost:3333"
 }

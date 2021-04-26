@@ -4,7 +4,9 @@
 </template>
 
 <script>
+import i18n from "../i18n"
 import Training from '@/components/Training.vue'
+import config from '../../config.json'
 
 export default {
     name: 'train',
@@ -21,7 +23,7 @@ export default {
     },
     methods: {
       getInfo : function() {
-        return fetch('/api/')
+        return fetch(config.api_url+'/trainings/locale/'+i18n.locale)
           .then(data=>data.json())
           .then(json => this.trainings = json)
       }

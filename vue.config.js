@@ -1,9 +1,13 @@
+configFile = require("./config.json")
+
 module.exports = {
+  publicPath: '/',
   chainWebpack: config => {
     config
       .plugin('html')
       .tap(args => {
-        args[0].title = "Cool website"
+        args[0].template = './public/index.html'
+        args[0].title = configFile.name
         return args
       })
   },

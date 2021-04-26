@@ -11,10 +11,11 @@
               ul.navbar-nav.mr-auto
                 li.nav-item(v-for="item in config.menu")
                   router-link(:to="item.url").nav-link {{$t(item.name)}}
+              ul.navbar-nav.mr-auto(align="right")  
                 li.nav-item
-                  strong(@click="change('uk')" align="right").nav-link UKR
+                  strong(@click="change('uk')").nav-link UKR
                 li.nav-item
-                  strong(@click="change('en')" align="right").nav-link ENG
+                  strong(@click="change('en')").nav-link ENG
           router-view
       .col-4
         div
@@ -56,7 +57,6 @@ export default {
   },
   methods: {
     change: function(locale) {
-      console.log(locale)
       i18n.locale = locale
     }
   }
